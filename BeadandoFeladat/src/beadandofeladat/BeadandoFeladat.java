@@ -49,8 +49,10 @@ public class BeadandoFeladat {
                 }
                 if (harcos.getEletero() - varazslo_sebzes >= 0) {
                     harcos.setEletero(harcos.getEletero() - varazslo_sebzes);
+                    harcos.harcol();
                 } else {
                     harcos.setEletero(0);
+                    harcos.veszit();
                 }
                 
                 //játéktér frissítése harc esetén

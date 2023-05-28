@@ -1,11 +1,14 @@
 package beadandofeladat;
 
-public class Harcos extends Karakter {
+public class Harcos implements Karakterek{
 
     private int eletero = 5;
     private int pozicio = 0;
     private char tipus = ' ';
 
+    public void harcol(){System.out.println("A Harcos kardozik");}
+    public void veszit(){System.out.println("A Harcost legyőzték");}
+    
     public Harcos(int eletero, int pozicio, char tipus) throws EleteroRangeCheckedException, PozicioRangeCheckedException {
         if (this.eletero > 4 && this.eletero < 10) {
             this.eletero = eletero;
@@ -20,7 +23,7 @@ public class Harcos extends Karakter {
         this.tipus = getTipus();
     }
 
-    @Override
+    
     public char getTipus() {
         return 'H';
     }
